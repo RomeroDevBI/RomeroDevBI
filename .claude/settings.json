@@ -30,6 +30,7 @@
     "claude-mem@thedotmack": true,
     "headroom@headroom-marketplace": true,
     "task-observer@one-skill-to-rule-them-all": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "mattpocock-skills@claude-plugins-official": true
   }
 }
