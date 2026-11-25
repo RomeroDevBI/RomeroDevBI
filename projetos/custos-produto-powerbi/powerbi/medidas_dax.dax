@@ -1,0 +1,118 @@
+// =====================================================================
+//  Café Serra Alta — Medidas DAX
+//  Crie uma tabela vazia chamada "_Medidas" (Inserir > Inserir Dados > OK)
+//  e cole cada medida abaixo com "Nova medida".
+// =====================================================================
+
+// ---------------------------- RECEITA --------------------------------
+Receita Bruta = SUM ( fato_vendas[receita_bruta] )
+Descontos = SUM ( fato_vendas[desconto] )
+Impostos = SUM ( fato_vendas[impostos] )
+Receita Líquida = SUM ( fato_vendas[receita_liquida] )
+Receita Revenda = SUM ( fato_vendas[receita_revenda] )      // faturamento do revendedor ao preço sugerido
+Quantidade Vendida = SUM ( fato_vendas[quantidade] )
+Pedidos = DISTINCTCOUNT ( fato_vendas[id_pedido] )
+Ticket Médio = DIVIDE ( [Receita Bruta], [Pedidos] )
+Preço Médio Venda = DIVIDE ( [Receita Bruta], [Quantidade Vendida] )
+Preço Médio Revenda = DIVIDE ( [Receita Revenda], [Quantidade Vendida] )
+
+// Margem do revendedor: quanto o parceiro ganha entre o preço que paga e o preço sugerido ao consumidor
+Margem Revendedor R$ =
+CALCULATE ( [Receita Revenda] - [Receita Bruta], dim_canal[tipo_canal] = "Revenda" )
+Margem Revendedor % =
+DIVIDE ( [Margem Revendedor R$], CALCULATE ( [Receita Revenda], dim_canal[tipo_canal] = "Revenda" ) )
+
+// ---------------------------- CUSTOS ---------------------------------
+Custo Matéria-Prima = SUM ( fato_vendas[custo_materia_prima] )
+Custo Produção = SUM ( fato_vendas[custo_producao] )
+Custo Embalagem = SUM ( fato_vendas[custo_embalagem] )
+Custo Mão de Obra = SUM ( fato_vendas[custo_mao_obra] )
+Custo Perdas = SUM ( fato_vendas[custo_perdas] )
+Custo Transporte = SUM ( fato_vendas[custo_transporte] )
+Custo Marketing = SUM ( fato_marketing[investimento] )
+
+CPV =                                   // custo do produto vendido (fábrica)
+[Custo Matéria-Prima] + [Custo Produção] + [Custo Embalagem] + [Custo Mão de Obra] + [Custo Perdas]
+
+Custo Variável Total = [CPV] + [Custo Transporte]
+Custo Total = [Custo Variável Total] + [Custo Marketing]
+Custo Unitário = DIVIDE ( [CPV], [Quantidade Vendida] )
+Frete por kg = DIVIDE ( [Custo Transporte], SUM ( fato_vendas[peso_kg] ) )
+
+// --------------------------- RESULTADO -------------------------------
+Lucro Bruto = [Receita Líquida] - [CPV]
+Margem Bruta % = DIVIDE ( [Lucro Bruto], [Receita Líquida] )
+Margem Contribuição = [Receita Líquida] - [Custo Variável Total]
+Margem Contribuição % = DIVIDE ( [Margem Contribuição], [Receita Líquida] )
+Lucro Operacional = [Margem Contribuição] - [Custo Marketing]
+Margem Operacional % = DIVIDE ( [Lucro Operacional], [Receita Líquida] )
+Markup = DIVIDE ( [Receita Bruta], [CPV] )
+Lucro por Unidade = DIVIDE ( [Margem Contribuição], [Quantidade Vendida] )
+
+// Participação de cada custo sobre a receita líquida (para o gráfico de composição)
+% Matéria-Prima s/ RL = DIVIDE ( [Custo Matéria-Prima], [Receita Líquida] )
+% Transporte s/ RL = DIVIDE ( [Custo Transporte], [Receita Líquida] )
+% Marketing s/ RL = DIVIDE ( [Custo Marketing], [Receita Líquida] )
+
+// ------------------------- PRODUÇÃO / PERDAS -------------------------
+Qtd Produzida = SUM ( fato_producao[qtd_produzida] )
+Qtd Perdida Produção = SUM ( fato_producao[qtd_perdida] )
+% Perda Produção = DIVIDE ( [Qtd Perdida Produção], [Qtd Produzida] )
+Custo Perdas Total = SUM ( fato_perdas[custo_perda] )      // produção + armazenagem + transporte
+Unidades Perdidas = SUM ( fato_perdas[quantidade] )
+Custo Lote Médio = AVERAGE ( fato_producao[custo_total_lote] )
+Preço Café Verde (R$/kg) = AVERAGE ( fato_preco_materia_prima[preco_kg] )
+Preço Saca 60kg = AVERAGE ( fato_preco_materia_prima[preco_saca_60kg] )
+
+// ----------------------------- MARKETING -----------------------------
+Impressões = SUM ( fato_marketing[impressoes] )
+Cliques = SUM ( fato_marketing[cliques] )
+Conversões = SUM ( fato_marketing[conversoes] )
+CTR = DIVIDE ( [Cliques], [Impressões] )
+CPC = DIVIDE ( CALCULATE ( [Custo Marketing], fato_marketing[tipo_midia] = "Digital" ), [Cliques] )
+CAC Digital = DIVIDE ( CALCULATE ( [Custo Marketing], fato_marketing[tipo_midia] = "Digital" ), [Conversões] )
+ROI Marketing = DIVIDE ( [Margem Contribuição] - [Custo Marketing], [Custo Marketing] )
+ROAS = DIVIDE ( [Receita Bruta], [Custo Marketing] )
+
+// --------------------------- INTELIGÊNCIA DE TEMPO -------------------
+Receita Líquida AA = CALCULATE ( [Receita Líquida], SAMEPERIODLASTYEAR ( dim_calendario[data] ) )
+Var % Receita AA = DIVIDE ( [Receita Líquida] - [Receita Líquida AA], [Receita Líquida AA] )
+Margem Operacional % AA = CALCULATE ( [Margem Operacional %], SAMEPERIODLASTYEAR ( dim_calendario[data] ) )
+Var p.p. Margem = [Margem Operacional %] - [Margem Operacional % AA]
+Receita Líquida YTD = TOTALYTD ( [Receita Líquida], dim_calendario[data] )
+Custo Unitário AA = CALCULATE ( [Custo Unitário], SAMEPERIODLASTYEAR ( dim_calendario[data] ) )
+Var % Custo Unitário = DIVIDE ( [Custo Unitário] - [Custo Unitário AA], [Custo Unitário AA] )
+
+// ------------------------- CAIXAS DE TEXTO DINÂMICAS -----------------
+Título Margem =
+"Margem operacional de " & FORMAT ( [Margem Operacional %], "0.0%" ) &
+IF ( NOT ISBLANK ( [Margem Operacional % AA] ),
+     " (" & FORMAT ( [Var p.p. Margem] * 100, "+0.0;-0.0" ) & " p.p. vs ano anterior)" )
+
+// Cor condicional para cartões/barras (use em Formatação condicional > Valor do campo)
+Cor Margem =
+SWITCH ( TRUE (),
+    [Margem Contribuição %] >= 0.35, "#1B9E77",
+    [Margem Contribuição %] >= 0.20, "#E6A817",
+    "#D1495B" )
+
+// ------------------ TABELA AUXILIAR: CASCATA DE CUSTOS ---------------
+// 1) Modelagem > Nova tabela:
+// Etapas DRE =
+// DATATABLE ( "Ordem", INTEGER, "Etapa", STRING,
+//   { {1,"Receita Bruta"},{2,"Descontos"},{3,"Impostos"},{4,"Matéria-Prima"},{5,"Produção"},
+//     {6,"Embalagem"},{7,"Mão de Obra"},{8,"Perdas"},{9,"Transporte"},{10,"Marketing"} } )
+// 2) Classifique Etapa pela coluna Ordem e crie a medida abaixo.
+//    Use em um gráfico de Cascata: Categoria = Etapas DRE[Etapa], Valores = [Valor DRE]
+Valor DRE =
+SWITCH ( SELECTEDVALUE ( 'Etapas DRE'[Etapa] ),
+    "Receita Bruta", [Receita Bruta],
+    "Descontos", -[Descontos],
+    "Impostos", -[Impostos],
+    "Matéria-Prima", -[Custo Matéria-Prima],
+    "Produção", -[Custo Produção],
+    "Embalagem", -[Custo Embalagem],
+    "Mão de Obra", -[Custo Mão de Obra],
+    "Perdas", -[Custo Perdas],
+    "Transporte", -[Custo Transporte],
+    "Marketing", -[Custo Marketing] )

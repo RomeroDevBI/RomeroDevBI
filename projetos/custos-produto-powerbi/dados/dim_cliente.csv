@@ -1,0 +1,163 @@
+id_cliente,cliente,id_canal,id_regiao,tipo_cliente,cliente_desde,porte
+1,Consumidor Final MG,1,1,B2C,2020-03-01,Varejo Online
+2,Consumidor Final SP,1,2,B2C,2020-03-01,Varejo Online
+3,Consumidor Final RJ,1,3,B2C,2020-03-01,Varejo Online
+4,Consumidor Final ES,1,4,B2C,2020-03-01,Varejo Online
+5,Consumidor Final PR,1,5,B2C,2020-03-01,Varejo Online
+6,Consumidor Final SC,1,6,B2C,2020-03-01,Varejo Online
+7,Consumidor Final RS,1,7,B2C,2020-03-01,Varejo Online
+8,Consumidor Final GO,1,8,B2C,2020-03-01,Varejo Online
+9,Consumidor Final DF,1,9,B2C,2020-03-01,Varejo Online
+10,Consumidor Final BA,1,10,B2C,2020-03-01,Varejo Online
+11,Consumidor Final PE,1,11,B2C,2020-03-01,Varejo Online
+12,Consumidor Final CE,1,12,B2C,2020-03-01,Varejo Online
+13,Mercado Paulista 13,2,7,B2B,2021-09-22,Grande
+14,Hiper Serrano,2,6,B2B,2019-08-05,Pequeno
+15,Mercado Santa Luzia,2,12,B2B,2023-07-09,Grande
+16,Hiper União,2,1,B2B,2021-11-01,Médio
+17,Supermercado Planalto,2,2,B2B,2023-12-03,Pequeno
+18,Mercado Cerrado,2,9,B2B,2021-10-16,Médio
+19,Supermercado Cerrado 19,2,2,B2B,2024-08-04,Médio
+20,Supermercado Ipê,2,9,B2B,2022-12-23,Pequeno
+21,Mercado Monte Verde 21,2,7,B2B,2019-06-06,Pequeno
+22,Hiper Boa Safra,2,10,B2B,2023-11-26,Médio
+23,Rede Mineiro,2,2,B2B,2022-02-18,Pequeno
+24,Supermercado Santa Luzia 24,2,1,B2B,2023-04-21,Pequeno
+25,Rede Alvorada,2,7,B2B,2021-08-02,Pequeno
+26,Rede São Jorge,2,2,B2B,2021-12-15,Pequeno
+27,Rede Bom Preço,2,2,B2B,2023-04-28,Grande
+28,Rede Cerrado 28,2,2,B2B,2023-03-21,Médio
+29,Supermercado Imperial,2,2,B2B,2022-12-19,Pequeno
+30,Mercado Três Rios,2,2,B2B,2024-03-29,Grande
+31,Hiper Estrela,2,8,B2B,2024-08-27,Grande
+32,Rede Jardim,2,6,B2B,2019-11-18,Pequeno
+33,Hiper Bela Vista,2,2,B2B,2024-01-07,Médio
+34,Hiper Mineiro,2,5,B2B,2023-06-10,Pequeno
+35,Mercado Paulista 35,2,8,B2B,2022-03-08,Grande
+36,Mercado Do Vale,2,1,B2B,2019-09-21,Médio
+37,Mercado Mineiro,2,5,B2B,2024-05-20,Médio
+38,Mercado Pioneiro,2,7,B2B,2022-12-30,Pequeno
+39,Supermercado Cerrado 39,2,3,B2B,2024-01-03,Grande
+40,Rede Monte Verde,2,1,B2B,2021-10-01,Pequeno
+41,Rede Real 41,2,2,B2B,2025-04-02,Pequeno
+42,Hiper Imperial,2,2,B2B,2019-05-15,Pequeno
+43,Hiper Ipê,2,2,B2B,2021-09-25,Médio
+44,Mercado Atlântico,2,3,B2B,2023-12-08,Pequeno
+45,Rede Real 45,2,5,B2B,2021-08-19,Grande
+46,Hiper Monte Verde,2,2,B2B,2019-02-22,Médio
+47,Hiper Grão Fino,2,1,B2B,2023-05-22,Pequeno
+48,Rede Planalto 48,2,2,B2B,2022-02-26,Pequeno
+49,Rede Boa Safra 49,2,1,B2B,2022-02-13,Pequeno
+50,Rede Do Vale 50,2,2,B2B,2020-11-24,Médio
+51,Mercado Monte Verde 51,2,5,B2B,2025-01-16,Médio
+52,Supermercado Monte Verde,2,1,B2B,2025-01-21,Pequeno
+53,Rede Boa Safra 53,2,10,B2B,2021-11-18,Médio
+54,Rede Do Vale 54,2,12,B2B,2023-11-27,Pequeno
+55,Hiper Paulista,2,6,B2B,2023-08-22,Médio
+56,Rede Paulista,2,1,B2B,2024-09-06,Grande
+57,Mercado Serrano,2,2,B2B,2023-07-18,Médio
+58,Rede Cerrado 58,2,4,B2B,2020-02-11,Médio
+59,Supermercado Santa Luzia 59,2,9,B2B,2022-02-07,Médio
+60,Mercado Aurora,2,2,B2B,2022-12-13,Pequeno
+61,Supermercado Jardim,2,4,B2B,2022-12-17,Pequeno
+62,Supermercado Três Rios,2,2,B2B,2019-04-06,Pequeno
+63,Supermercado Aurora,2,3,B2B,2023-02-28,Médio
+64,Supermercado Primavera,2,1,B2B,2022-09-13,Médio
+65,Rede Planalto 65,2,2,B2B,2025-03-26,Médio
+66,Mercado Campo Belo,2,2,B2B,2022-09-21,Grande
+67,Supermercado Rota Sul,2,1,B2B,2021-08-19,Pequeno
+68,Atacadão Horizonte,3,8,B2B,2019-07-10,Médio
+69,Comercial Mineiro,3,3,B2B,2021-10-11,Pequeno
+70,Central Cerrado,3,4,B2B,2021-12-25,Pequeno
+71,Central Aurora,3,2,B2B,2022-06-07,Médio
+72,Comercial Ipê,3,2,B2B,2019-02-19,Grande
+73,Distribuidora Litoral 73,3,9,B2B,2022-06-02,Médio
+74,Distribuidora Aurora,3,3,B2B,2019-09-07,Pequeno
+75,Distribuidora Ipê,3,6,B2B,2020-07-14,Médio
+76,Comercial Rota Sul,3,7,B2B,2023-11-03,Pequeno
+77,Comercial Planalto,3,1,B2B,2025-02-20,Grande
+78,Distribuidora Nova Era,3,1,B2B,2022-06-30,Médio
+79,Atacadão Imperial,3,2,B2B,2021-11-24,Pequeno
+80,Central Serrano,3,2,B2B,2024-12-31,Pequeno
+81,Comercial Atlântico,3,2,B2B,2024-09-13,Pequeno
+82,Atacadão Primavera,3,11,B2B,2020-01-14,Grande
+83,Atacadão Paulista,3,1,B2B,2025-02-07,Pequeno
+84,Central São Jorge,3,10,B2B,2023-09-18,Médio
+85,Distribuidora Litoral 85,3,10,B2B,2019-09-24,Médio
+86,Comercial Bela Vista,3,2,B2B,2023-11-11,Médio
+87,Atacadão Estrela,3,5,B2B,2024-07-31,Pequeno
+88,Distribuidora Estrela,3,7,B2B,2020-08-26,Grande
+89,Central Do Vale,3,11,B2B,2019-03-15,Pequeno
+90,Distribuidora Litoral 90,3,9,B2B,2019-12-19,Médio
+91,Atacadão Pioneiro,3,2,B2B,2023-07-14,Médio
+92,Central Ipê,3,2,B2B,2020-12-14,Médio
+93,Empório Alvorada,4,7,B2B,2022-02-22,Grande
+94,Cafeteria Rota Sul,4,1,B2B,2019-02-02,Pequeno
+95,Empório Bom Preço,4,2,B2B,2019-02-11,Médio
+96,Cafeteria Ipê 96,4,1,B2B,2022-03-10,Pequeno
+97,Padaria Artesanal Pioneiro,4,6,B2B,2021-08-17,Pequeno
+98,Café Bela Vista,4,8,B2B,2023-07-04,Pequeno
+99,Padaria Artesanal Bom Preço 99,4,7,B2B,2021-09-24,Pequeno
+100,Café São Jorge,4,11,B2B,2021-07-03,Pequeno
+101,Café Mineiro 101,4,2,B2B,2022-03-15,Pequeno
+102,Cafeteria Atlântico 102,4,11,B2B,2020-10-20,Pequeno
+103,Empório Bela Vista,4,11,B2B,2022-10-04,Médio
+104,Cafeteria União,4,5,B2B,2019-09-01,Médio
+105,Cafeteria Real,4,1,B2B,2019-01-15,Pequeno
+106,Padaria Artesanal Primavera,4,4,B2B,2024-11-15,Pequeno
+107,Empório Mineiro,4,8,B2B,2022-12-29,Pequeno
+108,Padaria Artesanal Jardim,4,1,B2B,2019-09-09,Médio
+109,Empório Três Rios,4,9,B2B,2021-11-30,Pequeno
+110,Café Santa Luzia,4,3,B2B,2022-10-25,Pequeno
+111,Padaria Artesanal Campo Belo 111,4,9,B2B,2020-10-28,Pequeno
+112,Empório Planalto 112,4,2,B2B,2021-09-06,Pequeno
+113,Padaria Artesanal Litoral,4,5,B2B,2020-09-22,Pequeno
+114,Empório Ipê,4,2,B2B,2020-06-28,Médio
+115,Padaria Artesanal Imperial,4,7,B2B,2025-01-15,Médio
+116,Café Mineiro 116,4,1,B2B,2022-09-29,Médio
+117,Café Imperial 117,4,1,B2B,2021-01-03,Médio
+118,Empório Planalto 118,4,1,B2B,2024-10-19,Médio
+119,Café Ipê,4,2,B2B,2022-08-21,Pequeno
+120,Café Cerrado,4,1,B2B,2019-02-18,Médio
+121,Café Primavera 121,4,1,B2B,2024-03-26,Médio
+122,Café Atlântico 122,4,4,B2B,2023-04-15,Pequeno
+123,Padaria Artesanal Aurora,4,2,B2B,2025-03-14,Médio
+124,Cafeteria Três Rios 124,4,10,B2B,2024-05-11,Pequeno
+125,Empório Primavera,4,1,B2B,2024-08-06,Médio
+126,Café Jardim,4,2,B2B,2022-08-06,Médio
+127,Empório Horizonte 127,4,2,B2B,2019-01-17,Grande
+128,Empório Litoral,4,3,B2B,2019-08-22,Grande
+129,Café Horizonte,4,9,B2B,2021-07-18,Médio
+130,Padaria Artesanal União,4,1,B2B,2024-04-24,Médio
+131,Café Alvorada,4,10,B2B,2021-01-07,Médio
+132,Padaria Artesanal Campo Belo 132,4,7,B2B,2023-01-17,Pequeno
+133,Cafeteria Nova Era,4,7,B2B,2024-03-14,Médio
+134,Cafeteria Alvorada,4,3,B2B,2024-05-26,Pequeno
+135,Padaria Artesanal Estrela,4,3,B2B,2023-04-28,Pequeno
+136,Cafeteria Horizonte,4,2,B2B,2019-11-18,Pequeno
+137,Café Real,4,3,B2B,2022-10-21,Médio
+138,Café Atlântico 138,4,2,B2B,2021-04-22,Pequeno
+139,Empório Estrela,4,2,B2B,2020-02-25,Pequeno
+140,Cafeteria Três Rios 140,4,2,B2B,2024-12-22,Pequeno
+141,Padaria Artesanal Mineiro,4,10,B2B,2023-11-07,Pequeno
+142,Empório Rota Sul,4,3,B2B,2024-05-05,Pequeno
+143,Café Imperial 143,4,5,B2B,2022-06-25,Médio
+144,Cafeteria São Jorge 144,4,5,B2B,2020-10-24,Pequeno
+145,Café Serrano,4,7,B2B,2022-10-06,Médio
+146,Cafeteria Planalto,4,9,B2B,2019-10-31,Grande
+147,Cafeteria São Jorge 147,4,5,B2B,2022-12-01,Pequeno
+148,Cafeteria Atlântico 148,4,1,B2B,2024-11-22,Pequeno
+149,Padaria Artesanal Rota Sul 149,4,1,B2B,2020-01-25,Médio
+150,Padaria Artesanal Paulista,4,4,B2B,2023-12-06,Pequeno
+151,Padaria Artesanal Rota Sul 151,4,8,B2B,2019-07-27,Pequeno
+152,Empório Horizonte 152,4,4,B2B,2019-08-07,Grande
+153,Café Primavera 153,4,5,B2B,2019-10-25,Grande
+154,Cafeteria Mineiro,4,4,B2B,2021-12-07,Médio
+155,Cafeteria Santa Luzia 155,4,3,B2B,2024-10-17,Pequeno
+156,Padaria Artesanal Do Vale,4,3,B2B,2022-10-11,Médio
+157,Padaria Artesanal Bom Preço 157,4,11,B2B,2023-12-13,Médio
+158,Café Mineiro 158,4,1,B2B,2023-02-22,Pequeno
+159,Padaria Artesanal Três Rios,4,2,B2B,2020-04-24,Médio
+160,Cafeteria Santa Luzia 160,4,2,B2B,2024-08-28,Pequeno
+161,Cafeteria Ipê 161,4,7,B2B,2024-01-04,Pequeno
+162,Empório Aurora,4,2,B2B,2019-12-29,Médio

@@ -1,0 +1,11 @@
+id_produto,sku,produto,id_linha,categoria,peso_g,kg_cafe_verde_un,custo_embalagem_base,custo_producao_base,custo_mao_obra_base,preco_revenda_sugerido,perda_media_pct,unidades_por_caixa,data_lancamento
+1,CSA-TRD-250,Tradicional Moído 250g,1,Moído,250,0.305,0.85,0.55,0.6,22.9,0.025,20,2020-03-01
+2,CSA-TRD-500,Tradicional Moído 500g,1,Moído,500,0.61,1.2,0.95,0.9,41.9,0.025,10,2020-03-01
+3,CSA-EXF-500,Extraforte Moído 500g,1,Moído,500,0.61,1.2,1.05,0.9,43.9,0.03,10,2020-03-01
+4,CSA-GOU-250,Gourmet Moído 250g,2,Moído,250,0.305,1.6,0.7,0.95,32.9,0.02,20,2020-03-01
+5,CSA-GOU-G250,Gourmet Grãos 250g,2,Grãos,250,0.3,1.75,0.6,0.95,36.9,0.018,20,2020-03-01
+6,CSA-ESP-250,Especial Microlote 250g,3,Grãos,250,0.3,2.4,0.8,1.6,64.9,0.015,20,2024-04-01
+7,CSA-DES-250,Descafeinado Moído 250g,2,Moído,250,0.305,1.6,1.9,1.0,34.9,0.03,20,2020-03-01
+8,CSA-CAP-10,Cápsulas Compatíveis 10un,4,Cápsulas,55,0.068,3.1,1.4,0.8,24.9,0.04,20,2023-08-01
+9,CSA-FSV-1KG,Food Service Grãos 1kg,5,Grãos,1000,1.2,2.1,1.7,1.4,89.9,0.015,6,2020-03-01
+10,CSA-SOL-100,Solúvel Premium 100g,1,Solúvel,100,0.23,1.9,2.3,0.7,28.9,0.02,20,2020-03-01

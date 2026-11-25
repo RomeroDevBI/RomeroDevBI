@@ -1,0 +1,29 @@
+{
+  "name": "Café Serra Alta",
+  "dataColors": ["#6F4E37", "#C08552", "#1B9E77", "#E6A817", "#3D5A80", "#D1495B", "#8E7DBE", "#98C1D9"],
+  "background": "#FFFFFF",
+  "foreground": "#2B2118",
+  "tableAccent": "#6F4E37",
+  "good": "#1B9E77",
+  "neutral": "#E6A817",
+  "bad": "#D1495B",
+  "maximum": "#3B2416",
+  "center": "#C08552",
+  "minimum": "#F3E9DC",
+  "textClasses": {
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 13, "color": "#2B2118" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#2B2118" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#5C4B3B" },
+    "callout": { "fontFace": "Segoe UI Bold", "fontSize": 26, "color": "#3B2416" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } } }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#E8DCCB" } }, "radius": 8 }],
+        "dropShadow": [{ "show": false }]
+      }
+    },
+    "page": { "*": { "background": [{ "color": { "solid": { "color": "#F7F2EA" } }, "transparency": 0 }] } }
+  }
+}
